@@ -1,0 +1,29 @@
+#include <iostream.h>
+using namespace std;
+ 
+int main()
+{  
+int a[2][3] =  
+	{  {2, 5, 5}, {4, 0, 6} };
+int b[3][2] =  
+	{  {4, 5},  {4, 8}, {3, 9}  };
+int c[2][2] =  
+	{  {0, 0},  {0, 0}  };
+int i,j,k;    
+int r1 = 2, c1 = 3, c2 = 2;
+ 
+for(i=0; i<r1; i++)    
+{    
+for(j=0; j<c2; j++)    
+{   
+for(k=0; k<c1; k++)
+c[i][j] += a[i][k] * b[k][j];
+}
+}
+for(i=0; i<r1; i++)    
+{    
+for(j=0; j<c2; j++)    
+cout << c[i][j]<<endl;  
+}
+return 0;
+}
